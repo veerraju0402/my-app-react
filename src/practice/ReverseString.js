@@ -12,13 +12,13 @@ import { useData } from './MyUseContextHook';
 //   }
 
 
-function Temp(){
-  const {mysurprise} =useData();
-  return(
-  <h2>here is a {mysurprise}</h2>
- // <h2>here is a {mysurprise.mykeyName}</h2>
-  )
-}
+// function Temp(){
+//   const {mysurprise} =useData();
+//   return(
+//   <h2>here is a {mysurprise}</h2>
+//  // <h2>here is a {mysurprise.mykeyName}</h2>
+//   )
+// }
 
 export function MyNum() {
 

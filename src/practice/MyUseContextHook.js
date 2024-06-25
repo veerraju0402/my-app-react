@@ -1,23 +1,38 @@
 import React, { createContext,useState ,useContext} from 'react';
+import { TempContext } from '../App';
 
-const GiftContext= createContext()
 
-export const GiftProvider =({children}) =>{  //1.import in app.js using <GiftProvider> tag
-const [surprise,setSurprise]=useState("apple");
+export const GiftContext= createContext()
+
+export const GiftProvider =({children}) =>{ 
+const [myName,setMyName]=useState("AVR");
+
 return(
-    <GiftContext.Provider value={{surprise,setSurprise}}>
+    <GiftContext.Provider value={myName}>
         {children}
     </GiftContext.Provider>
 )
-
 }
 
-export const useData =()=>useContext(GiftContext) 
-//2.import where ever needed to display
-// function Temp(){
-//     const {mysurprise} =useData();
-//     return(
-//     <h2>here is a {mysurprise}</h2>
-//    // <h2>here is a {mysurprise.mykeyName}</h2>
-//     )
-//   }
+export function MyTemp1(){
+    const mysurprise =useContext(TempContext);
+    const mysurprise2 =useContext(GiftContext) ;
+    return(
+        <h2>MyTemp1 GiftContext is a {mysurprise} & {mysurprise2}</h2>
+    )
+  }
+
+  export function MyTemp(){
+    const mysurprise =useContext(TempContext);
+    const mysurprise2 =useContext(GiftContext) ;
+    return(
+    <h2>MyTemp TempContext is a {mysurprise} & {mysurprise2}</h2>
+ )
+  }
+
+//   <TempContext.Provider value={surprise}>
+//     <GiftProvider>
+//       <MyTemp/>
+//       <MyTemp1/>
+//     </GiftProvider >
+//   </TempContext.Provider>

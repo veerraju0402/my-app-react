@@ -1,8 +1,29 @@
 
-import MyIncrement from './home';
+// import MyIncrement from './home';
+// import { useState } from 'react';
+// import './cssFiles/home.css';
+// import SampleRest from './RestApi/SampleRest';
+// import Timer from './practice/useEffectTest'
+import { createContext } from 'react';
+import Stopwatch from './practice/UseReducerTest';
+import Component1 from './practice/useContextTest'
+
+// import Stopwatch from './practice/UseReducerTest'
+import Post from './useReducerTest/Post'
+import "./useReducerTest/post.css";
+import { FormUsingReducer } from './useReducerTest2/FormUsingReducer';
 import { useState } from 'react';
-import './cssFiles/home.css';
-import SampleRest from './RestApi/SampleRest';
+import { GiftProvider, MyTemp, MyTemp1 } from './practice/MyUseContextHook';
+import Appp from './practice/MyOutlet';
+import OutletApp  from './NestedRouter/App';
+import React from 'react';
+import { BrowserRouter } from "react-router-dom";
+import CounterThree from './useReducerTest/CounterThree';
+import ReduceAndContApp from './UseReducerWithContext/App';
+import { MyCallback } from './useCallback/MyCallback';
+import HookTimer from './UseRef/MyUseRef';
+import CounterOne from './practice/CustomHookCounter';
+import UserForm from './MyCustomHook/MyCustomHookPart1';
 
 
 function App() {
@@ -18,15 +39,47 @@ function App() {
   // );
 }
 
+export const TempContext= createContext()
 export function App1() {
-
+  const [surprise,setSurprise]=useState("apple");
+console.log('App1 function')
   return (
     <div>
-      {/* <GiftProvider>
-      <MultiState/>
-      </GiftProvider> */}
+      {/* <MyIncrement/> */}
 
-      <SampleRest />
+{/* <Timer/> */}
+{/* <Component1/> */}
+
+{/* <Stopwatch/> */}
+{/* <Post/> */}
+{/* <CounterOne/> */}
+{/* <FormUsingReducer /> */}
+{/* <Stopwatch/> */}
+
+{/* <GiftProvider /> */}
+
+{/* <TempContext.Provider value={surprise}>
+  <GiftProvider>
+ <MyTemp/>
+ <MyTemp1/>
+</GiftProvider >
+</TempContext.Provider> */}
+
+{/* <ReduceAndContApp/> */}
+{/* <MyCallback/> */}
+{/* <CounterOne/> */}
+<UserForm/>
+
+{/* <React.StrictMode>
+    <BrowserRouter>
+      <OutletApp />
+    </BrowserRouter>
+  </React.StrictMode> */}
+
+  {/* <CounterThree /> */}
+       
+
+      {/* <SampleRest /> */}
 
       {/* <MyCalculator/> */}
       {/* <Resize/>   */}
@@ -34,7 +87,5 @@ export function App1() {
     </div>
   );
 }
-
-
 
 export default App;
