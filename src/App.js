@@ -24,6 +24,11 @@ import { MyCallback } from './useCallback/MyCallback';
 import HookTimer from './UseRef/MyUseRef';
 import CounterOne from './practice/CustomHookCounter';
 import UserForm from './MyCustomHook/MyCustomHookPart1';
+import ExampleComponent from './practice/checkbox';
+import SearchApp from './searchResults/App';
+// import AppRedux from './useRedux/AppRedux';
+import ReduxApp from './useRedux/App';
+import MyPopUp from './practice/PopUp';
 
 
 function App() {
@@ -41,7 +46,7 @@ function App() {
 
 export const TempContext= createContext()
 export function App1() {
-  const [surprise,setSurprise]=useState("apple");
+  const [surprise,setSurprise]=useState({ name: "Raju", age: "16" });
 console.log('App1 function')
   return (
     <div>
@@ -64,11 +69,16 @@ console.log('App1 function')
  <MyTemp1/>
 </GiftProvider >
 </TempContext.Provider> */}
+{/* <ExampleComponent /> */}
+{/* <SearchApp/> */}
+<ReduxApp/>
+
+{/* <MyPopUp/> */}
 
 {/* <ReduceAndContApp/> */}
 {/* <MyCallback/> */}
 {/* <CounterOne/> */}
-<UserForm/>
+{/* <UserForm/> */}
 
 {/* <React.StrictMode>
     <BrowserRouter>

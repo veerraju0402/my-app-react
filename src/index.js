@@ -29,7 +29,6 @@ import MyLayoutFun from './pages/Layout';
 import MyNoPageFun from './pages/NoPage';
 import ImageFun from './practice/ImageFun.js';
 
-
 const data = { name: "Raju", age: "16" };
 // const myelement =<div >Hi {data.name}</div>
 
@@ -94,7 +93,10 @@ root.render(
 //<MyForm3 />
 //<MyBlogsFun />
 //<MyApp />
+
+
 <App1 />
+
 //<MyIncrement count={10}/>
 //<MyMain />
 //<Header />

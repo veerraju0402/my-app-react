@@ -30,4 +30,5 @@ export function CounterOne(){
        <button onClick={()=>dispatch({type:'reset'})}>Reset</button> */}
         </>
     )
+    
 }
